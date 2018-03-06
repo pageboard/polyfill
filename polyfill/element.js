@@ -13,7 +13,7 @@ Pageboard.elements.polyfill = {
 		});
 		var features = Object.keys(map).join(',');
 		if (features) {
-			this.scripts = `${this.url}?flags=gated&features=${features}`;
+			Pageboard.elements.page.scripts.unshift(`${this.url}?flags=gated&features=${features}`);
 		}
 	},
 	polyfills: 'default'
